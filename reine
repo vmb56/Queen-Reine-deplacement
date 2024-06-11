@@ -1,0 +1,27 @@
+class Position {
+    int row;
+    int column;
+    
+    // Constructor, getters, setters, etc.
+}
+
+abstract class Piece {
+    protected int row;
+    protected int column;
+    
+    // Constructor, getters, setters, etc.
+    
+    abstract boolean isValidMove(Position newPosition);
+}
+
+class Queen extends Piece {
+    boolean isValidMove(Position newPosition) {
+        // Check if the move is vertical, horizontal, or diagonal
+        if (newPosition.column == this.column || newPosition.row == this.row || 
+            Math.abs(newPosition.column - this.column) == Math.abs(newPosition.row - this.row)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
