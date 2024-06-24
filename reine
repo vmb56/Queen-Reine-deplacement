@@ -2,14 +2,11 @@ class Position {
     int row;
     int column;
     
-    // Constructor, getters, setters, etc.
 }
 
 abstract class Piece {
     protected int row;
     protected int column;
-    
-    // Constructor, getters, setters, etc.
     
     abstract boolean isValidMove(Position newPosition);
 }
